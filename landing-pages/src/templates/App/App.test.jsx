@@ -1,10 +1,11 @@
-import { screen } from '@testing-library/react';
 import Home from '.';
 import { renderTheme } from '../../styles/render-theme';
-import { theme } from '../../styles/theme';
 
 describe('<Home />', () => {
   it('should rede home', () => {
     renderTheme(<Home />);
+  });
+  it('should do something', () => {
+    expect(1).toBe(1);
   });
 });
