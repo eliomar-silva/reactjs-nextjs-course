@@ -10,13 +10,14 @@ describe('<Footer />', () => {
     expect(screen.getByRole('heading', { name: 'Olá' })).toBeInTheDocument();
     expect(container).toMatchInlineSnapshot(`
       .c4 {
-        font-size: 2.4rem;
+        font-size: 2.0rem;
       }
 
       .c2 {
         max-width: 120rem;
         margin: 0 auto;
         padding: 3.2rem;
+        width: 100%;
       }
 
       .c0 {
@@ -31,7 +32,7 @@ describe('<Footer />', () => {
       }
 
       .c0 .c3 {
-        font-size: 1.6rem;
+        font-size: 2.0rem;
       }
 
       .c0 .c1 {
@@ -43,7 +44,7 @@ describe('<Footer />', () => {
         <footer
           class="c0"
         >
-          <div
+          <section
             class="c1 c2"
           >
             <div
@@ -53,7 +54,7 @@ describe('<Footer />', () => {
                 Olá
               </h1>
             </div>
-          </div>
+          </section>
         </footer>
       </div>
     `);

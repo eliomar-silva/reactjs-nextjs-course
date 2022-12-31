@@ -5,6 +5,7 @@ exports[`<Menu /> should not render links 1`] = `
   max-width: 120rem;
   margin: 0 auto;
   padding: 3.2rem;
+  width: 100%;
 }
 
 .c7 {
@@ -197,7 +198,7 @@ exports[`<Menu /> should not render links 1`] = `
   <div
     class="c2"
   >
-    <div
+    <section
       class="c3 c4"
     >
       <div
@@ -218,7 +219,7 @@ exports[`<Menu /> should not render links 1`] = `
           class="c9"
         />
       </div>
-    </div>
+    </section>
   </div>
 </div>
 `;
@@ -228,6 +229,7 @@ exports[`<Menu /> should render Logo an Main Menu Nav 1`] = `
   max-width: 120rem;
   margin: 0 auto;
   padding: 3.2rem;
+  width: 100%;
 }
 
 .c7 {
@@ -325,7 +327,7 @@ exports[`<Menu /> should render Logo an Main Menu Nav 1`] = `
   display: block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   padding: 1.6rem;
   color: #0A1128;
   position: relative;
@@ -447,7 +449,7 @@ exports[`<Menu /> should render Logo an Main Menu Nav 1`] = `
   <div
     class="c2"
   >
-    <div
+    <section
       class="c3 c4"
     >
       <div
@@ -539,7 +541,7 @@ exports[`<Menu /> should render Logo an Main Menu Nav 1`] = `
           </a>
         </nav>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 `;

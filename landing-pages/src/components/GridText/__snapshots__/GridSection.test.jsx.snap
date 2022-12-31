@@ -14,7 +14,7 @@ exports[`<GridText /> should render with background 1`] = `
 }
 
 .c6 {
-  font-size: 2.4rem;
+  font-size: 2.0rem;
 }
 
 .c2 .c5 {
@@ -51,6 +51,7 @@ exports[`<GridText /> should render with background 1`] = `
   max-width: 120rem;
   margin: 0 auto;
   padding: 3.2rem;
+  width: 100%;
 }
 
 .c0 {
@@ -82,8 +83,9 @@ exports[`<GridText /> should render with background 1`] = `
 <div>
   <div
     class="c0"
+    id=""
   >
-    <div
+    <section
       class="c1"
     >
       <div
@@ -146,7 +148,7 @@ exports[`<GridText /> should render with background 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 `;
@@ -165,7 +167,7 @@ exports[`<GridText /> should render without background 1`] = `
 }
 
 .c6 {
-  font-size: 2.4rem;
+  font-size: 2.0rem;
 }
 
 .c2 .c5 {
@@ -202,6 +204,7 @@ exports[`<GridText /> should render without background 1`] = `
   max-width: 120rem;
   margin: 0 auto;
   padding: 3.2rem;
+  width: 100%;
 }
 
 .c0 {
@@ -233,8 +236,9 @@ exports[`<GridText /> should render without background 1`] = `
 <div>
   <div
     class="c0"
+    id=""
   >
-    <div
+    <section
       class="c1"
     >
       <div
@@ -297,7 +301,7 @@ exports[`<GridText /> should render without background 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 `;

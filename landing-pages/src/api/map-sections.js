@@ -92,9 +92,10 @@ export const mapImageGrid = (section = {}) => {
     sectionId,
     description,
     grid: grid.map((img) => {
+      const data = img.image.data[0] || {};
       const {
-        image: { url: srcImg = '', alternativeText: altText = '' } = '',
-      } = img;
+        attributes: { url: srcImg = '', alternativeText: altText = '' } = '',
+      } = data;
       return {
         srcImg,
         altText,

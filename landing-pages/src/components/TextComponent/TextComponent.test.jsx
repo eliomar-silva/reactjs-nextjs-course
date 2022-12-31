@@ -11,7 +11,7 @@ describe('<TextComponent />', () => {
     const { container } = renderTheme(<TextComponent>children</TextComponent>);
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
-        font-size: 2.4rem;
+        font-size: 2.0rem;
       }
 
       <div

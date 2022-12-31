@@ -36,8 +36,8 @@ describe('map-sections', () => {
   });
 
   it('should render sections when grid image for empty', () => {
-    const data = mapSections(pagesFakeData.data[2].attributes.sections);
-    expect(data[2].component).toBe('section.section-grid-image');
+    const data = mapSections(pagesFakeData.data[0].attributes.sections);
+    expect(data[3].component).toBe('section.section-grid-image');
   });
   it('should test with no text', () => {
     const data = mapSections([
@@ -164,8 +164,14 @@ describe('map-sections', () => {
       image_grid: [
         {
           image: {
-            alternativeText: 'abc',
-            url: 'a.svg',
+            data: [
+              {
+                attributes: {
+                  alternativeText: 'abc',
+                  url: 'a.svg',
+                },
+              },
+            ],
           },
         },
       ],
