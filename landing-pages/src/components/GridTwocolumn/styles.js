@@ -28,5 +28,7 @@ export const ImageContainer = styled.div`
   ${({ theme }) => css``}
 `;
 export const image = styled.img`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    width: 100%;
+  `}
 `;
