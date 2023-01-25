@@ -1,0 +1,148 @@
+# Write your query or mutation here
+fragment image on UploadFileEntityResponse {
+  data {
+    id
+    attributes {
+      alternativeText
+      url
+    }
+  }
+}
+
+fragment menuLink on ComponentMenuMenuLink {
+  id
+  link
+  text
+  newTab
+}
+fragment categories on CategoryRelationResponseCollection {
+  data {
+    id
+    attributes {
+      displayName
+      slug
+    }
+  }
+}
+fragment cover on UploadFileRelationResponseCollection {
+  data {
+    id
+    attributes {
+      alternativeText
+      url
+    }
+  }
+}
+fragment tag on TagRelationResponseCollection {
+  data {
+    id
+    attributes {
+      displayName
+      slug
+    }
+  }
+}
+fragment author on AuthorEntityResponse {
+  data {
+    id
+    attributes {
+      displayName
+      slug
+    }
+  }
+}
+fragment post on PostEntity {
+  id
+  attributes {
+    title
+    slug
+    excerpt
+    content
+    allowComments
+    cover {
+      ...cover
+    }
+    categories {
+      ...categories
+    }
+    tags {
+      ...tag
+    }
+    author {
+      ...author
+    }
+  }
+}
+
+fragment settings on SettingEntityResponse {
+  data {
+    id
+    attributes {
+      blogName
+      blogDescription
+      logo {
+        ...image
+      }
+      menuLink {
+        ...menuLink
+      }
+      text
+    }
+  }
+}
+
+query GET_POSTS {
+  setting {
+    ...settings
+  }
+  posts {
+    data {
+      ...post
+    }
+  }
+}
+
+query GET_POST_BY_SLUG($postSlug: String!) {
+  setting {
+    ...settings
+  }
+
+  posts(filters: { slug: { eq: $postSlug } }) {
+    data {
+      ...post
+    }
+  }
+}
+
+query GET_POSTS_BY_AUTHOR($authorSlug: String!) {
+  setting {
+    ...settings
+  }
+  posts(filters: { author: { slug: { eq: $authorSlug } } }) {
+    data {
+      ...post
+    }
+  }
+}
+query GET_POSTS_BY_CATEGORIES($categorySlug: String!) {
+  setting {
+    ...settings
+  }
+  posts(filters: { categories: { slug: { eq: $categorySlug } } }) {
+    data {
+      ...post
+    }
+  }
+}
+
+query GET_POSTS_BY_TAGS($tagSlug: String!) {
+  setting {
+    ...settings
+  }
+
+  posts(filters: { tags: { slug: { eq: $tagSlug } } }) {
+    data {
+      ...post
+    }
+  }
+}
